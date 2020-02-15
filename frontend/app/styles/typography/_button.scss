@@ -1,0 +1,31 @@
+.btn {
+  display: inline-block;
+  padding: size(1) size(2);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--confirm {
+    background-color: red;
+    color: white;
+  }
+
+  &--black {
+    border-color: black;
+    background-color: white;
+  }
+
+  &--square {
+    padding: unset;
+    border-radius: 0;
+    width: 30px;
+    height: 30px;
+  }
+}
