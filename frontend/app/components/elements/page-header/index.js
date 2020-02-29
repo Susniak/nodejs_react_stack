@@ -19,6 +19,12 @@ const PageHeader = (props) => {
                         <li className="page-header__list-element">
                             <Link to="/">Main page</Link>
                         </li>
+                        <li className="page-header__list-element">
+                            <Link to="/library">Library</Link>
+                        </li>
+                        <li className="page-header__list-element">
+                            <Link to="/dungeons">Dungeons</Link>
+                        </li>
                     </ul>
                     <ul className="page-header__list page-header__list--right">
                         <LoggedInComponent>

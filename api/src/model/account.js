@@ -9,7 +9,6 @@ const fields = [
     'email'
 ];
 
-
 const toQueryString = string => `"${string}"`;
 const queryString = string => `\`${string}\``;
 
@@ -65,7 +64,9 @@ class PlayerModel extends Model {
                         };
                     }
 
-                    previous.players.push(player);
+                    if (player.id) {
+                        previous.players.push(player);
+                    }
 
                     return previous;
                 }, {});

@@ -5,6 +5,7 @@ class CreateAccountAction extends Action {
     render() {
         const requestData = this.getRequestData();
         const accountModel = new AccountModel(requestData);
+        console.log(requestData);
 
         if (accountModel.validate()) {
             accountModel.create();

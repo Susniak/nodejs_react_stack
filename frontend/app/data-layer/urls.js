@@ -17,6 +17,10 @@ class Urls {
         return this.getUrl('player');
     }
 
+    createAccount() {
+        return this.getUrl('account');
+    }
+
     getUrl(url, params = false) {
         return `${this.base}/${url}${this.prepareParams(params)}`;
     }

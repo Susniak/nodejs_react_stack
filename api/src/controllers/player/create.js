@@ -4,16 +4,16 @@ import PlayerModel from "../../model/player";
 class CreatePlayerAction extends Action {
     render() {
         const requestData = this.getRequestData();
-        const accountModel = new PlayerModel(requestData);
+        const playerModel = new PlayerModel(requestData);
 
-        if (accountModel.validate()) {
-            accountModel.create();
+        if (playerModel.validate()) {
+            playerModel.create();
             this.response.status(200).send();
 
             return;
         }
 
-        this.response.status(400).send(accountModel.validationErrors);
+        this.response.status(400).send(playerModel.validationErrors);
     }
 }
 

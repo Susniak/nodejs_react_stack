@@ -9,8 +9,10 @@ const mapStateToProps = state => ({
 
 class PlayersList extends React.Component {
     render() {
+        const getPlayerCircle = circle => <div className="players-list__element"><PlayerCircle {...circle}/></div>;
+
         return <div className="players-list">
-            {this.props.players.map(circle => <div className="players-list__element"><PlayerCircle {...circle}/></div>)}
+            {this.props.players.map(getPlayerCircle)}
         </div>
     }
 }
