@@ -1,6 +1,8 @@
+import ApplicationConfig from '../../../config';
+
 class Urls {
     constructor() {
-        this.base = 'http://51.68.142.49:8080';
+        this.base = ApplicationConfig.backendUrl;
     }
 
     getAccount(payload) {

@@ -1,6 +1,8 @@
+import ApplicationConfig from '../../../config';
+
 export default {
-    host     : 'localhost',
-    user     : 'root',
-    password : 'MyNewPass',
-    database : 'tfs'
+    host     : ApplicationConfig.host,
+    user     : ApplicationConfig.user,
+    password : ApplicationConfig.password,
+    database : ApplicationConfig.database
 };
