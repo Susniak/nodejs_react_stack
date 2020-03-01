@@ -1,6 +1,6 @@
 class Urls {
     constructor() {
-        this.base = 'http://localhost:8080';
+        this.base = 'http://51.68.142.49:8080';
     }
 
     getAccount(payload) {
