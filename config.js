@@ -1,4 +1,5 @@
 const ApplicationConfig = {
+    runMysql: false,
     host: "localhost",
     backendUrl: "localhost:8080",
     user: 'root',

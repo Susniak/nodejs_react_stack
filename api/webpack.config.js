@@ -29,12 +29,11 @@ module.exports = {
 	mode: 'development',
 	watch: false,
 	target: 'node',
-	entry: './src/index.js',
+	entry: './api/src/index.js',
 	output: {
 		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist')
 	},
-	plugins: [new webpack.ProgressPlugin()],
 	module: {
 		rules: [
 			{

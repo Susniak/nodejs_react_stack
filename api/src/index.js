@@ -1,11 +1,14 @@
 import express from 'express';
 import cors from 'cors';
 
-import MysqlConnection from './core/MysqlConnection';
+import appConfig from '../../config';
 import databaseConfig from './config/database';
-import apiRouter from './controllers';
+import apiRouter from './router';
 
-if (!MysqlConnection.getInstance(databaseConfig)) {
+import MysqlConnection from '../core/MysqlConnection';
+
+
+if (appConfig.runMysql && !MysqlConnection.getInstance(databaseConfig)) {
     throw new Error('Cannot initialize database.');
 }
 

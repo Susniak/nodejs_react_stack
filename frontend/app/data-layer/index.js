@@ -4,12 +4,13 @@ import {Provider} from 'react-redux';
 import createSagaMiddleware from 'redux-saga'
 import logger from 'redux-logger';
 import {applyMiddleware, createStore} from 'redux';
-import rootReducer from './reducer';
-import rootSaga from './effects';
+
+import rootReducer from './root-reducer';
+import rootEffects from './root-effects';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, applyMiddleware(logger, sagaMiddleware));
-sagaMiddleware.run(rootSaga);
+sagaMiddleware.run(rootEffects);
 
 /**
  * Class responsible for providing store

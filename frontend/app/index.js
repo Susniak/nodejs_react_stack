@@ -1,9 +1,23 @@
-import React from "react";
-import {render} from "react-dom";
-import AppComponent from './app';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import * as icons from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import {BrowserRouter} from 'react-router-dom'
 
-const container = window.document.querySelector("#main-container");
-library.add(...Object.values(icons.fas));
-render(<AppComponent/>, container);
+import DataLayerComponent from './data-layer';
+import RoutesComponent from './routes';
+import ScrollToComponent from "../components/scroll-to";
+
+import './style.scss';
+
+/**
+ * Base application component
+ */
+const AppComponent = () => {
+    console.log("run");
+    return <DataLayerComponent>
+        <BrowserRouter>
+            <ScrollToComponent/>
+            <RoutesComponent/>
+        </BrowserRouter>
+    </DataLayerComponent>;
+};
+
+export default AppComponent;

@@ -1,0 +1,10 @@
+@import "../../../styles/mixins";
+@import "../../../styles/colors";
+@import "../../../styles/variables";
+
+.main {
+  &__results {
+    border: 1px solid $grey4;
+    margin-top: size(3);
+  }
+}

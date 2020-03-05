@@ -1,37 +1,8 @@
-import ApplicationConfig from '../../../config';
+const baseUrl = 'http://localhost:8080';
+const getUrl = postfix => `${baseUrl}/${postfix}`;
 
-class Urls {
-    constructor() {
-        this.base = ApplicationConfig.backendUrl;
-    }
+const urlsConfig = {
+    resultsList: getUrl('books')
+};
 
-    getAccount(payload) {
-        return this.getUrl('account', payload);
-    }
-
-    verifyAccount(token) {
-        return this.getUrl('account/verify', {
-            token
-        });
-    }
-
-    addPlayer() {
-        return this.getUrl('player');
-    }
-
-    createAccount() {
-        return this.getUrl('account');
-    }
-
-    getUrl(url, params = false) {
-        return `${this.base}/${url}${this.prepareParams(params)}`;
-    }
-
-    prepareParams(params) {
-        const string = params ? Object.keys(params).map(param => `${param}=${params[param]}`).join('&') : false;
-
-        return string ? `?${string}` : '';
-    }
-}
-
-export default new Urls();
+export default urlsConfig

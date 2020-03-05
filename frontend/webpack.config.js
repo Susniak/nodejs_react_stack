@@ -29,7 +29,7 @@ module.exports = {
     mode: 'development',
 
     entry: {
-        app: ['./app/index.js', './app/styles/style.scss']
+        app: ['./frontend/index.js']
     },
 
     output: {
@@ -37,15 +37,15 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
 
-    plugins: [new webpack.ProgressPlugin(), new HtmlWebpackPlugin({
-        template: './app/index.html'
+    plugins: [new HtmlWebpackPlugin({
+        template: './frontend/index.html'
     })],
 
     module: {
         rules: [
             {
                 test: /.(js|jsx)$/,
-                include: [path.resolve(__dirname, 'app')],
+                include: [path.resolve(__dirname)],
                 loader: 'babel-loader',
 
                 options: {

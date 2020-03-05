@@ -1,0 +1,10 @@
+@import "./mixins";
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+$font-small: 12px;
+$font-normal: 14px;
+
+$tabletPadding: size(1);
